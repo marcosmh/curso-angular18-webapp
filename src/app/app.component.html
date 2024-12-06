@@ -1,0 +1,30 @@
+
+<div id="content" class="col col-lg-10 col-lg-offset-1">
+
+  <header id="header" class="col col-lg-12" [style.background]="header_color">
+    <h1>{{ title }}</h1>
+  </header>
+
+  <nav id="menu" class="col col-lg-12">
+    <ul>
+      <li><a [routerLink]="['/']" [routerLinkActive]="['activado']">Home</a></li>
+      <li><a [routerLink]="['/productos']" [routerLinkActive]="['activado']">Productos</a></li>
+      <li><a [routerLink]="['/crear-producto']" [routerLinkActive]="['activado']">Crear Productos</a></li>
+    </ul>
+  </nav>
+
+  <section id="main" class="col col-lg-12">
+    <!-- componente actual -->
+    <br/><br/>
+    <router-outlet />
+    <br/>
+  </section>
+
+  <footer id="pie" class="col col-lg-12">
+    <p> Angular 4 WebApp 2024</p>
+  </footer>
+
+
+</div>
+
+

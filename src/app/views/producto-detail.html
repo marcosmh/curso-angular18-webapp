@@ -1,0 +1,19 @@
+<h2>{{titulo}}</h2>
+<br/>
+
+<div *ngIf="!producto">
+    <p>Cargando producto</p>
+</div>
+
+<div class="row" *ngIf="producto">
+    <div class="col col-lg-3" *ngIf="producto.imagen">
+        <img class="img-thumbnail producto_imagen" style="width:200px; heigth:200px" 
+            src="http://127.0.0.1:5000/static/img/ps4.jpg" />
+    </div>
+
+    <div class="col col-lg-9">
+        <h3>{{producto.nombre}}</h3>
+        <p><strong>$ {{producto.precio}}</strong></p>
+        <p>{{producto.descripcion}}</p>
+    </div>
+</div>
